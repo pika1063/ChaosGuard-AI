@@ -1,0 +1,7 @@
+import {FormEvent} from 'react';import {Link,useNavigate} from 'react-router-dom';
+const T={login:'Sign in',register:'Create account',forgot:'Reset password'};
+// DEMO ONLY: nothing is stored or sent. Replace onSubmit with real auth (e.g. OAuth/JWT via your backend); never keep passwords in client storage.
+export default function Auth({mode}:{mode:keyof typeof T}){const nav=useNavigate();const go=(e:FormEvent)=>{e.preventDefault();nav('/overview')};const i="mt-1 w-full rounded-lg border border-blue-400/20 bg-ink p-2";
+return<div className="mx-auto max-w-md px-4 py-16"><Link to="/" className="font-bold">ChaosGuard AI</Link><form onSubmit={go} className="card mt-6 space-y-3"><h1 className="text-2xl font-bold">{T[mode]}</h1><p className="text-sm text-slate-400">Frontend demonstration only. No credentials are stored or sent.</p>
+{mode==='register'&&<label className="block text-sm">Name<input className={i} required/></label>}<label className="block text-sm">Email<input type="email" className={i} required/></label>{mode!=='forgot'&&<label className="block text-sm">Password<input type="password" autoComplete="off" className={i} required/></label>}
+<button className="btn w-full bg-gradient-to-r from-cgb to-cgp">{T[mode]}</button><div className="flex gap-3 text-sm text-slate-400"><Link to="/login">Sign in</Link><Link to="/register">Register</Link><Link to="/forgot">Forgot password</Link></div></form></div>}

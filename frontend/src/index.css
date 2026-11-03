@@ -1,0 +1,112 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global theme */
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: #172554;
+  background: #f5f7fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f5f7fc;
+  color: #172554;
+}
+
+/* Dashboard cards */
+.card {
+  @apply rounded-2xl border p-5;
+  background: #ffffff;
+  border-color: #e5eaf4;
+  box-shadow: 0 3px 12px rgba(30, 58, 138, 0.04);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(30, 58, 138, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* Buttons */
+.btn {
+  @apply rounded-xl border px-4 py-2 text-sm font-medium;
+  background: #ffffff;
+  color: #334155;
+  border-color: #dbe3ef;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: #eff6ff;
+  border-color: #3b82f6;
+  color: #2563eb;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  @apply rounded-xl border;
+  background: #ffffff;
+  border-color: #dbe3ef;
+  color: #172554;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Selection */
+::selection {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* Smooth transitions */
+button,
+a {
+  transition: all 0.2s ease;
+}
+
+/* Print */
+@media print {
+  header,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+}

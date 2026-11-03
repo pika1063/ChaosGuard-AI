@@ -1,0 +1,29 @@
+{
+  "best": "Random Forest",
+  "version": "1.0",
+  "dataset": "CIC-IDS2017",
+  "rows_scanned": 2655060,
+  "sampled_rows": 212405,
+  "training_rows": 169924,
+  "testing_rows": 42481,
+  "features": 78,
+  "class_distribution": {
+    "BENIGN": 175996,
+    "ATTACK": 36409
+  },
+  "accuracy": 0.998163885030955,
+  "precision": 0.9932895097233635,
+  "recall": 0.9960175775885746,
+  "f1": 0.9946516730663741,
+  "roc_auc": 0.9998723739366177,
+  "confusion_matrix": [
+    [
+      35150,
+      49
+    ],
+    [
+      29,
+      7253
+    ]
+  ]
+}

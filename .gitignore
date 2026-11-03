@@ -1,0 +1,29 @@
+.venv/
+venv/
+__pycache__/
+node_modules/
+dist/
+.env
+*.pyc
+
+# Python
+backend/venv/
+backend/__pycache__/
+**/__pycache__/
+*.pyc
+
+# Large datasets
+backend/data/raw/
+backend/data/processed/*.csv
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# DVC cache
+backend/.dvc/cache/
+
+# Secrets
+.env
+
+backend/.dvc/tmp/

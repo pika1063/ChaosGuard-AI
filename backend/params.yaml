@@ -1,0 +1,14 @@
+﻿seed: 42
+
+data:
+  path: data/processed/cicids2017_clean.csv
+  label: Label
+  version: CIC-IDS2017
+
+model_version: "1.0"
+
+test_size: 0.2
+
+rf:
+  n_estimators: 150
+  max_depth: 18

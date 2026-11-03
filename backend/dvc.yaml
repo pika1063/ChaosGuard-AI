@@ -1,0 +1,17 @@
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+      - data/processed/cicids2017_clean.csv
+      - src/train.py
+    params:
+      - seed
+      - data
+      - model_version
+      - test_size
+      - rf
+    outs:
+      - models
+    metrics:
+      - metrics.json:
+          cache: false
